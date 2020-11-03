@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="sys@localhost" uuid="ab42b5a8-167d-4606-b899-8115f8cda696">
-      <database-info product="MySQL" version="5.7.31-0ubuntu0.18.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.31" exact-driver-version="8.0">
+    <data-source name="ProyectoJesusJavier@localhost" uuid="f54d14ce-a00f-427e-b483-4f90f2428973">
+      <database-info product="MySQL" version="5.5.5-10.4.14-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.4.14" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -17,10 +17,6 @@
           </node>
         </introspection-scope>
       </schema-mapping>
-      <ssh-properties>
-        <enabled>true</enabled>
-        <ssh-config-id>bc501b6a-7123-4742-bfb5-fe38b2077605</ssh-config-id>
-      </ssh-properties>
     </data-source>
   </component>
 </project>
