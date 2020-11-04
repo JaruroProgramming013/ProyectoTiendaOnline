@@ -25,6 +25,5 @@
     <input type="password" id="password" name="password"><br>
 </form>
 <a href="./form/registerForm.php">¿No está registrado?</a>
-<?php  ?>
 </body>
 </html>

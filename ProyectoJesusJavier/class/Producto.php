@@ -1,7 +1,7 @@
 <?php
 
 
-class Producto
+class Producto extends DAO
 {
 
 }

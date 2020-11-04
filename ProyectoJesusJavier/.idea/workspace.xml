@@ -20,26 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e369428-7d72-4a06-8540-98d59e9070be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/ProyectoTiendaOnline.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/DAO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/Usuario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/form/registerForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProyectoJesusJavier.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab42b5a8-167d-4606-b899-8115f8cda696.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab42b5a8-167d-4606-b899-8115f8cda696/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab42b5a8-167d-4606-b899-8115f8cda696/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab42b5a8-167d-4606-b899-8115f8cda696/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/actionRegistro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Producto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Validacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/listado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crearDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../crearDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form/registerForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/registerForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP XAMPP" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="0e2e21ad-d651-4d09-8a8f-0bc7999a8f47" name="Vagrant" port="8080" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Remote PHP 7.2" />
   <component name="ProjectId" id="1jTNcJNfD0v5Ved310M3NzNdsug" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -81,6 +74,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="Vagrant" start_url="/ProyectoTiendaOnline/ProyectoJesusJavier/index.php">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SQLScriptSettings">
     <option name="matrix">
       <map>
@@ -103,6 +101,7 @@
       <workItem from="1604147877532" duration="5503000" />
       <workItem from="1604303824246" duration="2415000" />
       <workItem from="1604420260934" duration="11163000" />
+      <workItem from="1604494200502" duration="2859000" />
     </task>
     <servers />
   </component>
@@ -122,17 +121,24 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="291" width="824" height="678" key="#CLI_Interpreters" timestamp="1604433234437">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="158" y="38" width="587" height="690" key="#CLI_Interpreters" timestamp="1604494900820">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="158" y="38" width="587" height="690" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1604494900820" />
     <state x="222" y="291" width="824" height="678" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1604433234437" />
-    <state x="552" y="143" width="806" height="746" key="#PHP" timestamp="1603824281484">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="100" width="585" height="523" key="#PHP" timestamp="1604494913623">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="100" width="585" height="523" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1604494913623" />
     <state x="552" y="143" width="806" height="746" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1603824281484" />
-    <state x="418" y="177" width="1093" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604137507240">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="266" y="38" key="#Servers" timestamp="1604495019825">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="266" y="38" key="#Servers/0.0.1366.728@0.0.1366.728" timestamp="1604495019825" />
+    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604495023062">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604495023062" />
     <state x="418" y="177" width="1093" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604137507240" />
     <state x="763" y="242" width="478" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1604151077967">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -142,33 +148,72 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="338" width="386" height="357" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604149812840" />
-    <state x="711" y="271" key="FileChooserDialogImpl" timestamp="1604432781962">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="506" y="190" key="FileChooserDialogImpl" timestamp="1604494896039">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="506" y="190" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604494896039" />
     <state x="711" y="271" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604432781962" />
-    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1604138044665">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1604496514372">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604496514372" />
     <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604138044665" />
-    <state width="1291" height="275" key="GridCell.Tab.0.center" timestamp="1604138044665">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1604496514372">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604496514372" />
     <state width="1291" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604138044665" />
-    <state width="1291" height="275" key="GridCell.Tab.0.left" timestamp="1604138044664">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1604496514372">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604496514372" />
     <state width="1291" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604138044664" />
-    <state width="1291" height="275" key="GridCell.Tab.0.right" timestamp="1604138044665">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1604496514372">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604496514372" />
     <state width="1291" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604138044665" />
-    <state x="539" y="244" width="822" height="552" key="NewPhpClassDialog" timestamp="1604149827843">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1604496514207">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604496514207" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1604496514207">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1604496514207" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1604496514207">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1604496514207" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1604496514207">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1604496514207" />
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1604496514208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604496514208" />
+    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1604496514208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1604496514208" />
+    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1604496514208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1604496514208" />
+    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1604496514208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1604496514208" />
+    <state x="434" y="121" width="585" height="496" key="NewPhpClassDialog" timestamp="1604497057441">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="121" width="585" height="496" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604497057441" />
     <state x="539" y="244" width="822" height="552" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604149827843" />
-    <state x="745" y="444" width="420" height="143" key="NewPhpFileDialog" timestamp="1604426579983">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="530" y="311" width="299" height="151" key="NewPhpFileDialog" timestamp="1604496639493">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="530" y="311" width="299" height="151" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604496639493" />
     <state x="745" y="444" width="420" height="143" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604426579983" />
     <state x="0" y="310" width="1274" height="730" key="SettingsEditor" timestamp="1604433235093">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -186,16 +231,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="680" y="437" width="545" height="166" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604433061962" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/form/registerForm.php</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
