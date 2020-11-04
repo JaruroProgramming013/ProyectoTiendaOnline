@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $contrasenha=$_POST["password"];
     $repetirContrasenha=$_POST["passwordRepeat"];
 
-    if(empty($usuario))
+    if(empty($usuario))x
         $errorUsuario="Por favor, introduzca un nombre de usuario.";
 
     if(empty($contrasenha))
