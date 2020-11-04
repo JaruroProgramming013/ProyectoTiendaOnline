@@ -18,11 +18,12 @@
 </head>
 <body>
 <h1>Tienda Online</h1>
-<form action="index.php" method="post">
+<form action="./form/index_submit.php" method="post">
     <label for="username">Usuario:</label>
     <input type="text" id="username" name="username"><br>
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password"><br>
+    <input type="submit"></input>
 </form>
 <a href="./form/registerForm.php">¿No está registrado?</a>
 </body>
