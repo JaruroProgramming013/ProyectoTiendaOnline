@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e369428-7d72-4a06-8540-98d59e9070be" name="Default Changelist" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/action/actionRegistro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/Producto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/Validacion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/listado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form/registerForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/registerForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form/registerForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/registerForm.php" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/form/añadir.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/añadir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form/index_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/index_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/listado.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/listado.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +41,7 @@
       <server host="localhost" id="0e2e21ad-d651-4d09-8a8f-0bc7999a8f47" name="Vagrant" port="8080" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP StandAlone" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Remote PHP 7.2" />
   <component name="ProjectId" id="1jTNcJNfD0v5Ved310M3NzNdsug" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,11 +55,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-=======
-    <property name="last_opened_file_path" value="/usr/lib/php/20190902/xdebug.so" />
->>>>>>> 990aa92142330c6609d920601d97f007ee1d8a95
+    <property name="last_opened_file_path" value="$USER_HOME$/Descargas/EjemploBD" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,16 +97,9 @@
       <workItem from="1604147877532" duration="5503000" />
       <workItem from="1604303824246" duration="2415000" />
       <workItem from="1604420260934" duration="11163000" />
-<<<<<<< Updated upstream
       <workItem from="1604494200502" duration="2859000" />
-<<<<<<< HEAD
-      <workItem from="1604499996463" duration="7495000" />
-=======
-=======
-      <workItem from="1604502747123" duration="78000" />
-      <workItem from="1604503169095" duration="17000" />
->>>>>>> Stashed changes
->>>>>>> 990aa92142330c6609d920601d97f007ee1d8a95
+      <workItem from="1604650789273" duration="59000" />
+      <workItem from="1604651359545" duration="2682000" />
     </task>
     <servers />
   </component>
@@ -139,28 +119,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-<<<<<<< HEAD
-    <state x="178" y="43" width="661" height="689" key="#CLI_Interpreters" timestamp="1604500334272">
-      <screen x="0" y="0" width="1536" height="824" />
-=======
-<<<<<<< Updated upstream
     <state x="158" y="38" width="587" height="690" key="#CLI_Interpreters" timestamp="1604494900820">
       <screen x="0" y="0" width="1366" height="728" />
->>>>>>> 990aa92142330c6609d920601d97f007ee1d8a95
     </state>
     <state x="158" y="38" width="587" height="690" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1604494900820" />
-    <state x="178" y="43" width="661" height="689" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1604500334272" />
     <state x="222" y="291" width="824" height="678" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1604433234437" />
     <state x="393" y="100" width="585" height="523" key="#PHP" timestamp="1604494913623">
       <screen x="0" y="0" width="1366" height="728" />
-=======
-    <state x="222" y="291" width="824" height="678" key="#CLI_Interpreters" timestamp="1604502809108">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="222" y="291" width="824" height="678" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1604502809108" />
-    <state x="552" y="143" width="806" height="746" key="#PHP" timestamp="1603824281484">
-      <screen x="0" y="0" width="1920" height="1040" />
->>>>>>> Stashed changes
     </state>
     <state x="393" y="100" width="585" height="523" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1604494913623" />
     <state x="552" y="143" width="806" height="746" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1603824281484" />
@@ -168,10 +133,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="266" y="38" key="#Servers/0.0.1366.728@0.0.1366.728" timestamp="1604495019825" />
-    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604495023062">
+    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604651943089">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604495023062" />
+    <state x="297" y="124" width="778" height="574" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604651943089" />
     <state x="418" y="177" width="1093" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604137507240" />
     <state x="763" y="242" width="478" height="556" key="#com.intellij.ide.util.MemberChooser" timestamp="1604151077967">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -181,7 +146,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="338" width="386" height="357" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604149812840" />
-<<<<<<< Updated upstream
     <state x="506" y="190" key="FileChooserDialogImpl" timestamp="1604494896039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,14 +153,6 @@
     <state x="711" y="271" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604432781962" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1604496514372">
       <screen x="0" y="0" width="1366" height="728" />
-=======
-    <state x="711" y="271" key="FileChooserDialogImpl" timestamp="1604502807508">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="711" y="271" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604502807508" />
-    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1604138044665">
-      <screen x="0" y="0" width="1920" height="1040" />
->>>>>>> Stashed changes
     </state>
     <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604496514372" />
     <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604138044665" />
@@ -257,18 +213,10 @@
     </state>
     <state x="530" y="311" width="299" height="151" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604496639493" />
     <state x="745" y="444" width="420" height="143" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604426579983" />
-<<<<<<< HEAD
-    <state x="118" y="114" width="1020" height="707" key="SettingsEditor" timestamp="1604500338996">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="118" y="114" width="1020" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604500338996" />
-    <state x="0" y="310" width="1274" height="730" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604433235093" />
-=======
-    <state x="319" y="194" width="1274" height="730" key="SettingsEditor" timestamp="1604502810261">
+    <state x="0" y="310" width="1274" height="730" key="SettingsEditor" timestamp="1604433235093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="319" y="194" width="1274" height="730" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604502810261" />
->>>>>>> 990aa92142330c6609d920601d97f007ee1d8a95
+    <state x="0" y="310" width="1274" height="730" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604433235093" />
     <state x="825" y="369" width="260" height="301" key="cloudConfig.SelfSettingsDialog" timestamp="1604308012871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

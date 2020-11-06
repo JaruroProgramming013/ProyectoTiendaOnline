@@ -3,8 +3,9 @@
     <title>Añadir</title>
 </head>
 <body>
-<form action="./form/añadir.php" method="post">
+<form action="añadir.php" method="post">
     <p>Añadir</p>
+    <input type="text" >
     <input type="submit"></input>
 </form>
 

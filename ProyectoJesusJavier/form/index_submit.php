@@ -10,7 +10,7 @@
 <h1>Confirmacion</h1>
 
 <?php
-$conexion = new mysqli('localhot',"zamudio","zamudio","ProyectoJesusJavier");
+$conexion = new mysqli('localhost',"jruiz","asd","ProyectoJesusJavier");
 
 if ($conexion->connect_error) {
 
@@ -21,14 +21,16 @@ if ($conexion->connect_error) {
     $usernameP = $_POST["username"];
     $passwordP = $_POST["password"];
 
-    $sql = "SELECT * FROM 'PJJ_Usuario' WHERE 'Nombre'=$usernameP AND 'Contrasenha'=$passwordP";
+    $sql = "SELECT * FROM ProyectoJesusJavier.PJJ_Usuario WHERE Nombre='$usernameP' AND Contrasenha='$passwordP'";
 
 
-        if ($conexion->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+        if ($conexion->query($sql) instanceof mysqli_result) {
+            header("Location: ../page/listado.php");
         } else {
-            echo "Error deleting record: " . $conexion->error;
+            echo "Falla: " . $conexion->connect_error;
         }
+
+
 
 
 

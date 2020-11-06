@@ -3,20 +3,20 @@
     <title>Listado</title>
 </head>
 <body>
-<form action="./form/añadir.php" method="post">
+<form action="../form/añadir.php" method="post">
     <p>Añadir</p>
     <input type="submit"></input>
 </form>
 
 
-<form action="./form/borrar.php" method="post">
+<form action="../form/borrar.php" method="post">
     <p>Borrar</p>
     <input type="submit"></input>
 </form>
 
 
     <?php
-    $conexion = new mysqli('localhot',"zamudio","zamudio","ProyectoJesusJavier");
+    $conexion = new mysqli('localhost',"jruiz","asd","ProyectoJesusJavier");
 
     if ($conexion->connect_error) {
 
@@ -25,7 +25,7 @@
 
     }
 
-    $sql = "SELECT ID,Nombre,Descripcion,Precio,TipoPeriferico,Marca,CantidadStock FROM 'PJJ_Producto'";
+    $sql = "SELECT ID,Nombre,Descripcion,Precio,TipoPeriferico,Marca,CantidadStock FROM PJJ_Producto";
     $result = $conexion->query($sql);
 
 
@@ -33,7 +33,7 @@
 
         while($row = $result->fetch_assoc()){
 
-            echo "ID: ".$row["ID"]. "- Nombre: ".$row["Nombre"]. " - Precio: ".$row["Precio"] - "TipoPeriferico: ".$row["TipoPeriferico"] - "Marca: ".$row["Marca"] - "CantidadStock: ".$row["CantidadStock"];//Coloca lo que queda
+            echo "ID: ".$row["ID"]. "- Nombre: ".$row["Nombre"]. " - Precio: ".$row["Precio"]. " - TipoPeriferico: ".$row["TipoPeriferico"]. " - Marca: ".$row["Marca"]. " - CantidadStock: ".$row["CantidadStock"];//Coloca lo que queda
 
         }
 
