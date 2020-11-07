@@ -4,7 +4,8 @@
 </head>
 <body>
 <form action="añadir.php" method="post">
-    <p>Añadir</p>
+    <h2>Añadir</h2>
+    <label for=""
     <input type="text" >
     <input type="submit"></input>
 </form>

@@ -5,9 +5,11 @@
 <body>
 
     <?php
+    require_once "../class/DAO.php";
+
     $dao=new DAO();
 
-    $sql = "SELECT * FROM PJJ_Producto";
+    $sql = "SELECT * FROM ProyectoJesusJavier.PJJ_Producto";
 
     $tablaProductos=$dao->instruccionSQL($sql);
 
@@ -24,5 +26,8 @@
     }
     ?>
 
+    <form method="post">
+        <button type="submit" formaction="../form/añadir.php">Añadir</button>
+    </form>
 </body>
 </html>
