@@ -1,4 +1,4 @@
-<html lang="es">
+    <html lang="es">
 <head>
     <title>Registro</title>
     <style>
@@ -20,31 +20,44 @@
     </style>
 </head>
 <body>
-
+<h1>Registro de nueva cuenta</h1>
 <?php
-/*$usuario = $contrasenha = $repetirContrasenha = "";
-$errorUsuario = $errorContrasenhaVacia = $errorContrasenhaRepetida = "";
+$errorNoUsuario = $errorNoContrasenha = $errorPasswordNoCoinciden = $errorUsuarioExistente = $params = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+//Cojo la url actual
+$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-    $usuario=$_POST["username"];
-    $contrasenha=$_POST["password"];
-    $repetirContrasenha=$_POST["passwordRepeat"];
+//Si es una url con un error
+if(strpos($url,"error")) {
+    
+    //Procesamos la url
+    $arrayParametros = parse_url($url);
 
-    if(empty($usuario))x
-        $errorUsuario="Por favor, introduzca un nombre de usuario.";
+    //y los parametros de esta
+    parse_str($arrayParametros['query'], $params);
 
-    if(empty($contrasenha))
-        $errorContrasenhaVacia="Por favor, introduzca una contraseña.";
-    else{
-        if($contrasenha!==$repetirContrasenha){
-            $errorContrasenhaRepetida="Las contraseñas no coinciden.";
-        }
+    //para coger el tipo de error y actuar en consecuencia
+    switch ($params['error']) {
+        case "blankUser":
+            $errorNoUsuario = "Por favor, escriba un usuario.";
+            break;
+        case "blankPassword":
+            $errorNoUsuario = "Por favor, escriba una contraseña.";
+            break;
+        case "mismatchPassword":
+            $errorPasswordNoCoinciden = "Las contraseñas no coinciden.";
+            break;
+        case "existingUser":
+            $errorUsuarioExistente = "Este usuario ya existe.";
     }
 }
-*/?>
-<h1>Registro de nueva cuenta</h1>
+?>
 <form action="../action/actionRegistro.php" method="post">
+    <span class="error"><?php echo $errorNoUsuario?></span>
+    <span class="error"><?php echo $errorNoContrasenha?></span>
+    <span class="error"><?php echo $errorPasswordNoCoinciden?></span>
+    <span class="error"><?php echo $errorUsuarioExistente?></span>
+    <br>
     <label for="usernameRegistro">Usuario nuevo:</label>
     <input type="text" id="usernameRegistro" name="username">
     <br>

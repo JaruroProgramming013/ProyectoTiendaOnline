@@ -3,37 +3,19 @@
     <title>Listado</title>
 </head>
 <body>
-<form action="../form/añadir.php" method="post">
-    <p>Añadir</p>
-    <input type="submit"></input>
-</form>
-
-
-<form action="../form/borrar.php" method="post">
-    <p>Borrar</p>
-    <input type="submit"></input>
-</form>
-
 
     <?php
-    $conexion = new mysqli('localhost',"jruiz","asd","ProyectoJesusJavier");
+    $dao=new DAO();
 
-    if ($conexion->connect_error) {
+    $sql = "SELECT * FROM PJJ_Producto";
 
-    trigger_error("Fallo en la conexión: " . $conexion->connect_error,
-        E_USER_ERROR);
+    $tablaProductos=$dao->instruccionSQL($sql);
 
-    }
+    if($tablaProductos->num_rows>0){
 
-    $sql = "SELECT ID,Nombre,Descripcion,Precio,TipoPeriferico,Marca,CantidadStock FROM PJJ_Producto";
-    $result = $conexion->query($sql);
+        while($row = $tablaProductos->fetch_assoc()){
 
-
-    if($result->num_rows>0){
-
-        while($row = $result->fetch_assoc()){
-
-            echo "ID: ".$row["ID"]. "- Nombre: ".$row["Nombre"]. " - Precio: ".$row["Precio"]. " - TipoPeriferico: ".$row["TipoPeriferico"]. " - Marca: ".$row["Marca"]. " - CantidadStock: ".$row["CantidadStock"];//Coloca lo que queda
+            echo "Nombre: ".$row["Nombre"]. " - Precio: ".$row["Precio"]. " - TipoPeriferico: ".$row["TipoPeriferico"]. " - Marca: ".$row["Marca"]. " - CantidadStock: ".$row["CantidadStock"];//Coloca lo que queda
 
         }
 
@@ -44,10 +26,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-<?php

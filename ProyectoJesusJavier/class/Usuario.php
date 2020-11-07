@@ -1,22 +1,10 @@
 <?php
-
+require_once "DAO.php";
 
 class Usuario extends DAO
 {
-    private $ID, $nombre, $contrasenha;
+    private $nombre, $contrasenha;
     const TABLA="PJJ_Usuario";
-
-    public function getID()
-    {
-        return $this->ID;
-    }
-
-    //Teoricamente, el ID no es modificable. Pero necesito este método
-    //para poner el correspondiente con la BD.
-    public function setID($ID)
-    {
-        $this->ID = $ID;
-    }
 
     public function getNombre()
     {
@@ -55,7 +43,25 @@ class Usuario extends DAO
     }
 
     public function insertarEnBD(){
-        $insertar="INSERT INTO ".parent::BASEDATOS.".".self::TABLA."(Nombre, Contrasenha)
-        VALUES (".$this->getNombre().",".$this->getContrasenha().")";
+        $consultaPrimerUsuario=parent::instruccionSQL("SELECT ID FROM ".parent::BASEDATOS.".".self::TABLA);
+        if($consultaPrimerUsuario->num_rows==0) {
+
+            parent::instruccionSQL("ALTER TABLE " . parent::BASEDATOS . "." . self::TABLA . " AUTO_INCREMENT = 1");
+            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(ID,Nombre, Contrasenha)
+            VALUES (1,'" . $this->getNombre() . "','" . $this->getContrasenha() . "')";
+
+        }
+        else {
+
+            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(Nombre, Contrasenha)
+            VALUES ('" . $this->getNombre() . "','" . $this->getContrasenha() . "')";
+
+        }
+
+        parent::instruccionSQL($insertar);
+    }
+
+    public static function comprobarExistenciaEnBD($nombre){
+        return (new DAO)->instruccionSQL("SELECT ID FROM ".parent::BASEDATOS.".".self::TABLA." WHERE Nombre='".$nombre."'")->num_rows!=0;
     }
 }

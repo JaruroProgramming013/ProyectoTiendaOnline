@@ -18,7 +18,7 @@
 </head>
 <body>
 <h1>Tienda Online</h1>
-<form action="./form/index_submit.php" method="post">
+<form action="action/index_submit.php" method="post">
     <label for="username">Usuario:</label>
     <input type="text" id="username" name="username"><br>
     <label for="password">Contraseña:</label>
