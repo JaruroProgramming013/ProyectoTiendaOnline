@@ -8,7 +8,7 @@ class DAO
 
     protected $conexion;
 
-    protected function conectar(){
+    public function conectar(){
         $this->conexion=new mysqli(self::HOST,self::USUARIO,self::CONTRASENHA);
         if($this->conexion->connect_error){
             echo "<br><h2> Error al conectar con la base de datos. </h2><br>".$this->conexion->connect_error;
@@ -16,7 +16,7 @@ class DAO
         return $this->conexion;
     }
 
-    protected function desconectar(){
+    public function desconectar(){
         if (! $this->conexion->commit()) {
             echo "<br>Error con la última transacción.<br>";
         }
@@ -24,17 +24,17 @@ class DAO
         $this->conexion->close();
     }
 
-    protected function instruccionSQL($instruccion)
+    public function instruccionSQL($instruccion)
     {
         $this->conectar();
 
-        $sucess =  $this->conexion->query($instruccion);
+        $resultado =  $this->conexion->query($instruccion);
 
-        if (!$sucess) {
+        if (!$resultado) {
             echo "<br> Error en la consulta: " . $instruccion . "<br>";
         }
 
-        $this->desconectar();
+        return $resultado;
     }
 
     public function crearBD(){
