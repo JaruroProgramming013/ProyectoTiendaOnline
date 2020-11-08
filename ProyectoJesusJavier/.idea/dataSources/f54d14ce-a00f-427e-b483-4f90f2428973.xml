@@ -1095,7 +1095,7 @@
       <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="348" parent="338" name="UbicacionImagen">
+    <column id="348" parent="338" name="Imagen">
       <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
@@ -1104,102 +1104,111 @@
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="350" parent="338" name="PRIMARY">
+    <index id="350" parent="338" name="PJJ_Producto_Nombre_uindex">
+      <ColNames>Nombre</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="351" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="351" parent="338" name="ID_UNIQUE">
+    <key id="352" parent="338" name="ID_UNIQUE">
       <ColNames>ID</ColNames>
       <UnderlyingIndexName>ID_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="352" parent="339" name="ID">
+    <key id="353" parent="338" name="PJJ_Producto_Nombre_uindex">
+      <ColNames>Nombre</ColNames>
+      <UnderlyingIndexName>PJJ_Producto_Nombre_uindex</UnderlyingIndexName>
+    </key>
+    <column id="354" parent="339" name="ID">
       <Position>1</Position>
       <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="353" parent="339" name="Nombre">
+    <column id="355" parent="339" name="Nombre">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="354" parent="339" name="Contrasenha">
+    <column id="356" parent="339" name="Contrasenha">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="355" parent="339" name="ID_UNIQUE">
+    <index id="357" parent="339" name="ID_UNIQUE">
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="356" parent="339" name="Nombre_UNIQUE">
+    <index id="358" parent="339" name="Nombre_UNIQUE">
       <ColNames>Nombre</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="357" parent="339" name="PRIMARY">
+    <key id="359" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="358" parent="339" name="ID_UNIQUE">
+    <key id="360" parent="339" name="ID_UNIQUE">
       <ColNames>ID</ColNames>
       <UnderlyingIndexName>ID_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="359" parent="339" name="Nombre_UNIQUE">
+    <key id="361" parent="339" name="Nombre_UNIQUE">
       <ColNames>Nombre</ColNames>
       <UnderlyingIndexName>Nombre_UNIQUE</UnderlyingIndexName>
     </key>
-    <check id="360" parent="340" name="Puntuacion">
+    <check id="362" parent="340" name="Puntuacion">
       <Predicate>`Puntuacion` between 0 and 5</Predicate>
     </check>
-    <column id="361" parent="340" name="Numero">
+    <column id="363" parent="340" name="Numero">
       <Position>1</Position>
       <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="362" parent="340" name="IDUsuario">
+    <column id="364" parent="340" name="IDUsuario">
       <Position>2</Position>
       <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="363" parent="340" name="IDProducto">
+    <column id="365" parent="340" name="IDProducto">
       <Position>3</Position>
       <DataType>mediumint(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="364" parent="340" name="Puntuacion">
+    <column id="366" parent="340" name="Puntuacion">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="365" parent="340" name="Texto">
+    <column id="367" parent="340" name="Texto">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <index id="366" parent="340" name="IDUsuario">
+    <index id="368" parent="340" name="IDUsuario">
       <ColNames>IDUsuario</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="367" parent="340" name="IDProducto">
+    <index id="369" parent="340" name="IDProducto">
       <ColNames>IDProducto</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="368" parent="340" name="PRIMARY">
+    <key id="370" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Numero</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="369" parent="340" name="PJJ_Valoracion_ibfk_1">
+    <foreign-key id="371" parent="340" name="PJJ_Valoracion_ibfk_1">
       <ColNames>IDUsuario</ColNames>
       <RefTableName>PJJ_Usuario</RefTableName>
       <RefColNames>ID</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="370" parent="340" name="PJJ_Valoracion_ibfk_2">
+    <foreign-key id="372" parent="340" name="PJJ_Valoracion_ibfk_2">
       <ColNames>IDProducto</ColNames>
       <RefTableName>PJJ_Producto</RefTableName>
       <RefColNames>ID</RefColNames>

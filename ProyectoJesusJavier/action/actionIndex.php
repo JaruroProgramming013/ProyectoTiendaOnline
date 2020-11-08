@@ -10,7 +10,7 @@ Nombre='".$_POST["username"]."'";
 $usuarioEnBD= $dao->instruccionSQL($sql)->fetch_assoc();
 
 if (Validacion::validarLogin($_POST["username"],$_POST["password"]) && password_verify($_POST["password"],$usuarioEnBD["Contrasenha"])) {
-    header("Location: ../page/listado.php");
+    header("Location: ../controller/ProductListController.php?usuario=".$_POST["username"]);
 } else {
     header("Location: ../index.php");
     echo "Error en el login";

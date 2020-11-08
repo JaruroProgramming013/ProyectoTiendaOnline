@@ -1,9 +1,9 @@
 <?php
-
+require_once "DAO.php";
 
 class Producto extends DAO
 {
-    private $ID, $nombre, $descripcion, $precio, $tipoPeriferico, $marca, $cantidadStock, $ubicacionImagen;
+    private $nombre, $descripcion, $precio, $tipoPeriferico, $marca, $cantidadStock, $imagen;
     const TABLA="PJJ_Producto";
 
 
@@ -67,14 +67,14 @@ class Producto extends DAO
         $this->cantidadStock = $cantidadStock;
     }
 
-    public function getUbicacionImagen()
+    public function getImagen()
     {
-        return $this->ubicacionImagen;
+        return $this->imagen;
     }
 
-    public function setUbicacionImagen($ubicacionImagen): void
+    public function setImagen($imagen): void
     {
-        $this->ubicacionImagen = $ubicacionImagen;
+        $this->imagen = $imagen;
     }
 
     public function crearTabla(){
@@ -87,7 +87,7 @@ class Producto extends DAO
     TipoPeriferico  varchar(20)   not null,
     Marca           varchar(30)   not null,
     CantidadStock   smallint      not null,
-    UbicacionImagen varchar(100)  null,
+    Imagen varchar(100)  null,
     constraint ID_UNIQUE
         unique (ID)
 );
@@ -100,18 +100,34 @@ class Producto extends DAO
         if($consultaPrimerProducto->num_rows==0) {
 
             parent::instruccionSQL("ALTER TABLE " . parent::BASEDATOS . "." . self::TABLA . " AUTO_INCREMENT = 1");
-            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(ID,Nombre, Precio, TipoPeriferico, Marca, CantidadStock)
-            VALUES (1,'" . $this->getNombre() . "','" . $this->getPrecio() . "','" . $this->getTipoPeriferico() . "','" . $this->getMarca() . "','" . $this->getCantidadStock() . "')";
+            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(ID,Nombre, Descripcion ,Precio, TipoPeriferico, Marca, CantidadStock, Imagen)
+            VALUES (1,'" . $this->getNombre() . "','"
+                . $this->getDescripcion() . "','"
+                . $this->getPrecio() . "','"
+                . $this->getTipoPeriferico() . "','"
+                . $this->getMarca() . "','"
+                . $this->getCantidadStock() . "','"
+                . $this->getImagen() . "')";
 
         }
         else {
 
-            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(Nombre, Precio, TipoPeriferico, Marca, CantidadStock)
-            VALUES ('" . $this->getNombre() . "','" . $this->getPrecio() . "','" . $this->getTipoPeriferico() . "','" . $this->getMarca() . "','" . $this->getCantidadStock() . "')";
+            $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(Nombre, Descripcion ,Precio, TipoPeriferico, Marca, CantidadStock, Imagen)
+            VALUES ('" . $this->getNombre() . "','"
+                . $this->getDescripcion() . "','"
+                . $this->getPrecio() . "','"
+                . $this->getTipoPeriferico() . "','"
+                . $this->getMarca() . "','"
+                . $this->getCantidadStock() . "','"
+                . $this->getImagen() . "')";
 
 
         }
 
         parent::instruccionSQL($insertar);
+    }
+
+    public static function comprobarExistenciaEnBD($nombre){
+        return (new DAO)->instruccionSQL("SELECT ID FROM ".parent::BASEDATOS.".".self::TABLA." WHERE Nombre='".$nombre."'")->num_rows!=0;
     }
 }

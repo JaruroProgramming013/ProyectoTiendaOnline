@@ -50,4 +50,56 @@ class Validacion
 
         return $resultado;
     }
+
+    public static function validarAnhadirProducto($nombre, $precio, $tipoPeriferico, $marca, $cantidadStock){
+        $resultado = TRUE;
+
+        if(empty($nombre)){
+            header("Location: ../form/anhadir.php?error=blankName");
+            exit;
+        }
+
+        if(empty($precio)){
+            header("Location: ../form/anhadir.php?error=blankPrice");
+            exit;
+        }
+
+        if(empty($tipoPeriferico)){
+            header("Location: ../form/anhadir.php?error=blankPeripheric");
+            exit;
+        }
+
+        if(empty($marca)){
+            header("Location: ../form/anhadir.php?error=blankBrand");
+            exit;
+        }
+
+        if(empty($cantidadStock)){
+            header("Location: ../form/anhadir.php?error=blankStock");
+            exit;
+        }
+
+        if(Producto::comprobarExistenciaEnBD($nombre)){
+            header("Location: ../form/anhadir.php?error=existingProduct");
+            exit;
+        }
+
+        return $resultado;
+    }
+
+    public static function validarValoracion($texto, $puntuacion){
+        $resultado = TRUE;
+
+        if(empty($texto)){
+            header("Location: ../form/detalleProducto.php?error=blankText");
+            exit;
+        }
+
+        if(empty($puntuacion)){
+            header("Location: ../form/detalleProducto.php?error=blankScore");
+            exit;
+        }
+
+        return $resultado;
+    }
 }
