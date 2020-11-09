@@ -65,7 +65,9 @@ session_start();
 
     ?>
 
-
+        <FORM METHOD=POST ACTION="actionBuscador.php">
+            Buscar: <INPUT TYPE="text" NAME="busqueda">
+        </FORM>
     </form>
 
 </body>
