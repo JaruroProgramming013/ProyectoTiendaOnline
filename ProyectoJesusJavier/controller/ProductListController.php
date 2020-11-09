@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once "../class/DAO.php";
 require_once "../class/Usuario.php";
 
@@ -11,6 +13,5 @@ parse_str($arrayParametros['query'], $params);
 
 $usuario->setNombre($params["usuario"]);
 
-$usuarioSerializado=serialize($usuario);
-file_put_contents("../serialized/usuarioSerializado.txt",$usuarioSerializado);
+$_SESSION['usuario']=$usuario->getNombre();
 header("Location: ../page/listado.php");

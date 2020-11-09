@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $producto->setMarca($_POST["marcaProducto"]);
         $producto->setCantidadStock($_POST["cantidadStockProducto"]);
         $producto->setImagen($_POST["imagenProducto"]);
-        //creo que esto de abajo no funca
+        //creo que esto de abajo no funciona
         if(is_uploaded_file($_FILES["imagenProducto"]["tmp_file"]))
             move_uploaded_file($_FILES["imagenProducto"]["tmp_file"],"/../img/".$_FILES["imagenProducto"]["name"]);
         $producto->insertarEnBD();

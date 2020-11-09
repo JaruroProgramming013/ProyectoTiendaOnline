@@ -3,6 +3,7 @@ require_once "../class/DAO.php";
 require_once "../class/Producto.php";
 require_once "../class/Valoracion.php";
 
+session_start();
 $dao=new DAO();
 $producto=new Producto();
 
@@ -27,8 +28,7 @@ $producto->setMarca($datosBBDD["Marca"]);
 $producto->setCantidadStock($datosBBDD["CantidadStock"]);
 $producto->setImagen($datosBBDD["Imagen"]);
 
-$productoSerializado=serialize($producto);
-file_put_contents("../serialized/productoSerializado.txt",$productoSerializado);
+$_SESSION["producto"]=$producto;
 
 //FIN REGION
 
@@ -47,34 +47,18 @@ $selectValoraciones=$dao->instruccionSQL("
     FROM ProyectoJesusJavier.PJJ_Valoracion
     WHERE IDProducto='".$idDeProducto['ID']."'
 ");
-
-//Si hay valoraciones
-if($selectValoraciones->num_rows>0){
-
     //Mientras que queden valoraciones
     while($fila = $selectValoraciones->fetch_assoc()) {
 
-       //Averigua el nombre de la valoracion actual
-       $selectNombreAutorDeId=$dao->instruccionSQL("
-      SELECT Nombre
-      FROM ProyectoJesusJavier.PJJ_Usuario
-      INNER JOIN PJJ_Valoracion PV on PJJ_Usuario.ID = PV.IDUsuario
-     WHERE PV.IDUsuario='".$fila['IDUsuario']."'
-    ");
-       $nombreAutor=mysqli_fetch_assoc($selectNombreAutorDeId);
-
        //Crea un nuevo objeto valoracion
 
-       $valoracion=new Valoracion($fila["Puntuacion"],$fila["Texto"],$nombreAutor["Nombre"],$params['nombre']);
+       $valoracion=new Valoracion($fila["Puntuacion"],$fila["Texto"],$_SESSION["usuario"],$params['nombre']);
 
        //Serializalo y guarda la serializacion en un array
 
-       $valoraciones[]=serialize($valoracion);
+       $valoraciones[]=$valoracion;
     }
 
-    $valoracionesSerializadas=serialize($valoraciones);
-    file_put_contents("../serialized/valoracionesSerializadas.txt",$valoracionesSerializadas);
-
-}
+    $_SESSION['valoraciones']=$valoraciones;
 //FIN REGION
-header("Location: ../page/detalleProducto.php?nombre=".$datosBBDD["Nombre"]);
+header("Location: ../page/detalleProducto.php");

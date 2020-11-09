@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="es">
 <head>
     <title>Listado</title>
@@ -28,11 +31,7 @@
 
     $dao=new DAO();
 
-    $usuarioSerializado=file_get_contents("../serialized/usuarioSerializado.txt");
-
-    $usuario=unserialize($usuarioSerializado);
-
-    echo "<p>Bienvenido, ".$usuario->getNombre()."</p>";
+    echo "<p>Bienvenido, ".$_SESSION["usuario"]."</p>";
 
     $sql = "SELECT * FROM ProyectoJesusJavier.PJJ_Producto";
 

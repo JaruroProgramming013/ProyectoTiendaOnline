@@ -15,16 +15,16 @@
 </head>
 <body>
 <?php
+//NOTA: al sacar un objeto de una sesion, importa la clase de dicho objeto ANTES de iniciar la sesion.
+require_once "../class/DAO.php";
 require_once "../class/Producto.php";
-require_once "../class/Usuario.php";
+session_start();
+$usuario=$_SESSION["usuario"];
 
-$usuarioSerializado=file_get_contents("../serialized/usuarioSerializado.txt");
+$producto=new Producto();
+$producto=$_SESSION["producto"];
 
-$usuario=unserialize($usuarioSerializado);
-
-$productoSerializado=file_get_contents("../serialized/productoSerializado.txt");
-
-$producto=unserialize($productoSerializado);
+$valoraciones[]=$_SESSION["valoraciones"];
 
 echo "<h1>".$producto->getNombre()." - ".$producto->getPrecio()."€</h1><br>";
 
@@ -48,7 +48,7 @@ echo "<p> Quedan <b>".$producto->getCantidadStock()."</b> unidades</p>"
 
 <h2>Valoraciones</h2>
 
-<form method="post" action="../action/actionValoracion.php?autor=<?php echo $usuario->getNombre() ?>&producto=<?php echo $producto->getNombre() ?>">
+<form method="post" action="../action/actionValoracion.php?autor=<?php echo $_SESSION["usuario"] ?>&producto=<?php echo $producto->getNombre() ?>">
     <label for="textBox">¿Que opina de este producto?</label>
     <br>
     <textarea id="textBox" name="Texto"></textarea>
