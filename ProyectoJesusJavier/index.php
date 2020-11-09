@@ -22,7 +22,7 @@
 <body>
 <?php
 
-$errorUsuarioVacio = $errorContrasenhaVacia = $errorUsuarioNoExiste = ""
+$errorUsuarioVacio = $errorContrasenhaVacia = $errorUsuarioNoExiste = "";
 
 //Cojo la url actual
 $url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -39,21 +39,20 @@ if(strpos($url,"error")) {
     //para coger el tipo de error y actuar en consecuencia
     switch ($params['error']) {
         case "blankUser":
-            $errorNoUsuario = "Por favor, escriba un usuario.";
+            $errorUsuarioVacio = "Por favor, escriba un usuario.";
             break;
         case "blankPassword":
-            $errorNoUsuario = "Por favor, escriba una contraseña.";
+            $errorContrasenhaVacia = "Por favor, escriba una contraseña.";
             break;
-        case "mismatchPassword":
-            $errorPasswordNoCoinciden = "Las contraseñas no coinciden.";
-            break;
-        case "existingUser":
-            $errorUsuarioExistente = "Este usuario ya existe.";
+        case "notAnUser":
+            $errorUsuarioNoExiste = "Datos erroneos.";
     }
 }
-
 ?>
 <h1>Tienda Online</h1>
+<span class="error"><?php echo $errorUsuarioVacio?></span>
+<span class="error"><?php echo $errorContrasenhaVacia?></span>
+<span class="error"><?php echo $errorUsuarioNoExiste?></span>
 <form action="action/actionIndex.php" method="post">
     <label for="username">Usuario:</label>
     <input type="text" id="username" name="username"><br>

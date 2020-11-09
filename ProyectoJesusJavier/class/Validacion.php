@@ -34,18 +34,18 @@ class Validacion
         $resultado = TRUE;
 
         if(empty($usuario)){
-            $resultado = FALSE;
-            echo "Por favor, escriba un usuario. <br>";
+            header("Location: ../index.php?error=blankUser");
+            exit;
         }
 
         if(empty($contrasenha)){
-            $resultado = FALSE;
-            echo "Por favor, escriba un contraseña. <br>";
+            header("Location: ../index.php?error=blankPassword");
+            exit;
         }
 
         if(!Usuario::comprobarExistenciaEnBD($usuario)){
-            $resultado = FALSE;
-            echo "Este usuario no está registado. <br>";
+            header("Location: ../index.php?error=notAnUser");
+            exit;
         }
 
         return $resultado;

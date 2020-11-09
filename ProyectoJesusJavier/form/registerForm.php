@@ -42,7 +42,7 @@ if(strpos($url,"error")) {
             $errorNoUsuario = "Por favor, escriba un usuario.";
             break;
         case "blankPassword":
-            $errorNoUsuario = "Por favor, escriba una contraseña.";
+            $errorNoContrasenha = "Por favor, escriba una contraseña.";
             break;
         case "mismatchPassword":
             $errorPasswordNoCoinciden = "Las contraseñas no coinciden.";
