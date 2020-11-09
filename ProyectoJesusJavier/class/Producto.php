@@ -102,11 +102,11 @@ class Producto extends DAO
             parent::instruccionSQL("ALTER TABLE " . parent::BASEDATOS . "." . self::TABLA . " AUTO_INCREMENT = 1");
             $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(ID,Nombre, Descripcion ,Precio, TipoPeriferico, Marca, CantidadStock, Imagen)
             VALUES (1,'" . $this->getNombre() . "','"
-                . $this->getDescripcion() . "','"
-                . $this->getPrecio() . "','"
+                . $this->getDescripcion() . "',"
+                . $this->getPrecio() . ",'"
                 . $this->getTipoPeriferico() . "','"
-                . $this->getMarca() . "','"
-                . $this->getCantidadStock() . "','"
+                . $this->getMarca() . "',"
+                . $this->getCantidadStock() . ",'"
                 . $this->getImagen() . "')";
 
         }
@@ -114,11 +114,11 @@ class Producto extends DAO
 
             $insertar = "INSERT INTO " . parent::BASEDATOS . "." . self::TABLA . "(Nombre, Descripcion ,Precio, TipoPeriferico, Marca, CantidadStock, Imagen)
             VALUES ('" . $this->getNombre() . "','"
-                . $this->getDescripcion() . "','"
-                . $this->getPrecio() . "','"
+                . $this->getDescripcion() . "',"
+                . $this->getPrecio() . ",'"
                 . $this->getTipoPeriferico() . "','"
-                . $this->getMarca() . "','"
-                . $this->getCantidadStock() . "','"
+                . $this->getMarca() . "',"
+                . $this->getCantidadStock() . ",'"
                 . $this->getImagen() . "')";
 
 

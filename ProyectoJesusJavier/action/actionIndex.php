@@ -13,5 +13,4 @@ if (Validacion::validarLogin($_POST["username"],$_POST["password"]) && password_
     header("Location: ../controller/ProductListController.php?usuario=".$_POST["username"]);
 } else {
     header("Location: ../index.php");
-    echo "Error en el login";
 }
