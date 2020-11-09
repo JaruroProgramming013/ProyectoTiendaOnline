@@ -87,16 +87,47 @@ class Validacion
         return $resultado;
     }
 
+    public static function validarEditarProducto($nombre, $precio, $tipoPeriferico, $marca, $cantidadStock){
+        $resultado = TRUE;
+
+        if(empty($nombre)){
+            header("Location: ../form/editar.php?error=blankName&nombre=".$nombre);
+            exit;
+        }
+
+        if(empty($precio)){
+            header("Location: ../form/editar.php?error=blankPrice&nombre=".$nombre);
+            exit;
+        }
+
+        if(empty($tipoPeriferico)){
+            header("Location: ../form/editar.php?error=blankPeripherical&nombre=".$nombre);
+            exit;
+        }
+
+        if(empty($marca)){
+            header("Location: ../form/editar.php?error=blankBrand&nombre=".$nombre);
+            exit;
+        }
+
+        if(empty($cantidadStock)){
+            header("Location: ../form/editar.php?error=blankStock&nombre=".$nombre);
+            exit;
+        }
+
+        return $resultado;
+    }
+
     public static function validarValoracion($texto, $puntuacion){
         $resultado = TRUE;
 
         if(empty($texto)){
-            header("Location: ../form/detalleProducto.php?error=blankText");
+            header("Location: ../page/detalleProducto.php?error=blankText");
             exit;
         }
 
         if(empty($puntuacion)){
-            header("Location: ../form/detalleProducto.php?error=blankScore");
+            header("Location: ../page/detalleProducto.php?error=blankScore");
             exit;
         }
 

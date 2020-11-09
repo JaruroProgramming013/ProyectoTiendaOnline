@@ -95,6 +95,22 @@ class Producto extends DAO
         parent::instruccionSQL($creacionTabla);
     }
 
+    public function actualizar($id){
+
+        $instruccion="
+        UPDATE " . parent::BASEDATOS . "." . self::TABLA . "
+        SET Nombre= '".$this->getNombre()."',
+            Descripcion= '".$this->getDescripcion()."',
+            Precio=".$this->getPrecio().",
+            TipoPeriferico='".$this->getTipoPeriferico()."',
+            Marca='".$this->getMarca()."',
+            CantidadStock=". $this->getCantidadStock() .",
+            Imagen='".$this->getImagen()."'
+        WHERE ID=".$id;
+
+        parent::instruccionSQL($instruccion);
+    }
+
     public function insertarEnBD(){
         $consultaPrimerProducto=parent::instruccionSQL("SELECT ID FROM ".parent::BASEDATOS.".".self::TABLA);
         if($consultaPrimerProducto->num_rows==0) {

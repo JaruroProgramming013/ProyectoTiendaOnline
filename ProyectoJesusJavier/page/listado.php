@@ -32,6 +32,11 @@ session_start();
     $dao=new DAO();
 
     echo "<p>Bienvenido, ".$_SESSION["usuario"]."</p>";
+    echo "<button formaction='../index.php'>Volver a login</button><br>";
+
+    if($_SESSION["permisoAdmin"]) {
+        echo "<button formaction='../form/anhadir.php' >Añadir productos</button>";
+    }
 
     $sql = "SELECT * FROM ProyectoJesusJavier.PJJ_Producto";
 
@@ -43,16 +48,24 @@ session_start();
 
         while($row = $tablaProductos->fetch_assoc()){
 
-            echo "<a href='../controller/DetailController.php?nombre=".$row["Nombre"]."'>".$row["Nombre"]."</a><img alt='Sin imagen' src=\"../img/".$row["Imagen"]."\"/><span>" . $row["Descripcion"]. "</span>
-                  <button formaction='../action/actionBorrar.php?nombre=".$row["Nombre"]."'>Borrar</button><br>";//Coloca lo que queda
+            echo "<a href='../controller/DetailController.php?nombre=".$row["Nombre"]."'>".$row["Nombre"]."</a><img alt='Sin imagen' src=\"../img/".$row["Imagen"]."\"/><span>" . $row["Descripcion"]. "</span>";
 
+            if($_SESSION["permisoAdmin"]) {
+
+                echo "<button formaction='../action/actionBorrar.php?nombre=" . $row["Nombre"] . "'>Borrar</button>";
+                echo "<button formaction='../form/editar.php?nombre=" . $row["Nombre"] . "'>Editar</button><br>";
+
+            }
         }
 
     }else{
         echo "Sin productos";
     }
+
+
     ?>
-        <button formaction="../form/anhadir.php" >Añadir productos</button>
+
+
     </form>
 
 </body>

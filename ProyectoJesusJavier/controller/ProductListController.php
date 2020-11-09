@@ -14,4 +14,5 @@ parse_str($arrayParametros['query'], $params);
 $usuario->setNombre($params["usuario"]);
 
 $_SESSION['usuario']=$usuario->getNombre();
+$_SESSION['permisoAdmin']= $usuario->getNombre()=="jruiz"||$usuario->getNombre()=="jzamudio" || $usuario->getNombre()=="usuario";
 header("Location: ../page/listado.php");

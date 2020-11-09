@@ -54,7 +54,7 @@ $selectValoraciones=$dao->instruccionSQL("
 
        $valoracion=new Valoracion($fila["Puntuacion"],$fila["Texto"],$_SESSION["usuario"],$params['nombre']);
 
-       //Serializalo y guarda la serializacion en un array
+       //Guarda en un array
 
        $valoraciones[]=$valoracion;
     }

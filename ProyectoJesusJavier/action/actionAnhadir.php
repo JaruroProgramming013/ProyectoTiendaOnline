@@ -19,6 +19,4 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $producto->insertarEnBD();
         header("Location: ../page/listado.php");
     }
-
-
 }
