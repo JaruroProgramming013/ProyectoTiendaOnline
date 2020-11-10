@@ -61,7 +61,7 @@ echo "<p> Quedan <b>".$producto->getCantidadStock()."</b> unidades</p>"
     <label for="textBox">¿Que opina de este producto?</label>
     <br>
     <span class="error"><?php if($params["error"]=="blankText") echo"Escriba algo de texto"; ?></span><br>
-    <textarea id="textBox" name="Texto"></textarea>
+    <textarea id="textBox" maxlength="100" name="Texto"></textarea>
     <br>
     <label for="nota">¿Que nota pondrías a este producto (del 1 al 5)?</label>
     <input id="nota" name="Puntuacion" type="number" min="0" max="5" step="0.5">

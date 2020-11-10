@@ -55,7 +55,7 @@ if(strpos($url,"error")) {
 <span class="error"><?php echo $errorUsuarioNoExiste?></span>
 <form action="action/actionIndex.php" method="post">
     <label for="username">Usuario:</label>
-    <input type="text" id="username" name="username"><br>
+    <input type="text" maxlength="20" id="username" name="username"><br>
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password"><br>
     <input type="submit" value="Entrar">

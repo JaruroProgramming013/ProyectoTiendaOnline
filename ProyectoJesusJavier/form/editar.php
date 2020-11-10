@@ -39,10 +39,10 @@ $producto->setImagen($datosBBDD["Imagen"]);
     <h2>Editar</h2>
     <label for="nombre">Nombre:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankName") echo"Escriba un nombre"; ?></span>
-    <input type="text" value="<?php echo $producto->getNombre()?>" name="nombreProducto" id="nombre">
+    <input type="text" maxlength="20" value="<?php echo $producto->getNombre()?>" name="nombreProducto" id="nombre">
     <br>
     <label for="descripcion">Descripcion:</label>
-    <input type="text" value="<?php echo $producto->getDescripcion()?>" name="descripcionProducto" id="descripcion">
+    <input type="text" maxlength="100" value="<?php echo $producto->getDescripcion()?>" name="descripcionProducto" id="descripcion">
     <br>
     <label for="precio">Precio:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankPrice") echo"Escriba un precio"; ?></span>
@@ -65,7 +65,7 @@ $producto->setImagen($datosBBDD["Imagen"]);
     <br>
     <label for="marca">Marca:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankBrand") echo"Escriba una marca"; ?></span>
-    <input type="text" value="<?php echo $producto->getMarca()?>" name="marcaProducto" id="marca">
+    <input type="text" maxlength="30" value="<?php echo $producto->getMarca()?>" name="marcaProducto" id="marca">
     <br>
     <label for="cantidadStock">Cantidad stock inicial:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankStock") echo"Escriba una cantidad de stock inicial"; ?></span>

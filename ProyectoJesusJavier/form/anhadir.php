@@ -8,7 +8,7 @@ parse_str($arrayParametros['query'], $params);
     <title>Añadir</title>
     <style>
         .error{
-            color: red;
+            color: #ff0000;
         }
     </style>
 </head>
@@ -17,10 +17,10 @@ parse_str($arrayParametros['query'], $params);
     <h2>Añadir</h2>
     <label for="nombre">Nombre:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankName") echo"Escriba un nombre"; ?></span>
-    <input type="text" name="nombreProducto" id="nombre">
+    <input type="text" maxlength="20" name="nombreProducto" id="nombre">
     <br>
     <label for="descripcion">Descripcion:</label>
-    <input type="text" name="descripcionProducto" id="descripcion">
+    <input type="text" maxlength="100" name="descripcionProducto" id="descripcion">
     <br>
     <label for="precio">Precio:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankPrice") echo"Escriba un precio"; ?></span>
@@ -43,7 +43,7 @@ parse_str($arrayParametros['query'], $params);
     <br>
     <label for="marca">Marca:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankBrand") echo"Escriba una marca"; ?></span>
-    <input type="text" name="marcaProducto" id="marca">
+    <input type="text" maxlength="30" name="marcaProducto" id="marca">
     <br>
     <label for="cantidadStock">Cantidad stock inicial:</label>
     <span class="error"><?php  if(strpos($url,"error")) if($params["error"]=="blankStock") echo"Escriba una cantidad de stock inicial"; ?></span>

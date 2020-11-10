@@ -59,7 +59,7 @@ if(strpos($url,"error")) {
     <span class="error"><?php echo $errorUsuarioExistente?></span>
     <br>
     <label for="usernameRegistro">Usuario nuevo:</label>
-    <input type="text" id="usernameRegistro" name="username">
+    <input type="text" maxlength="20" id="usernameRegistro" name="username">
     <br>
     <label for="passwordRegistro">Contraseña:</label>
     <input type="password" id="passwordRegistro" name="password">
