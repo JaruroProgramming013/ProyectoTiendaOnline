@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../Programacion-Servicios-Procesos/PHP/php-7.4.13-nts-Win32-vc15-x64" />
+    </include_path>
+  </component>
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter id="15fd48dc-1ec0-406d-9244-95f55e6e649c" name="Remote PHP 7.2" home="vagrant://DATA" debugger_id="php.debugger.XDebug">
